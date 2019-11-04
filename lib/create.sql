@@ -1,1 +1,4 @@
-CREATE TABLE 
+CREATE TABLE cats (
+id INT PRIMARY KEY,
+name TEXT,
+)
