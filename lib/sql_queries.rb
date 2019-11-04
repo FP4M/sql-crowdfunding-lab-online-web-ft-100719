@@ -14,3 +14,9 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
     GROUP BY projects.title HAVING SUM(pledges.amount) >= projects.funding_goal;"
 end	end
 
+ef selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_book_category
+"SELECT projects.category, SUM(pledges.amount)
+  FROM projects
+  JOIN pledges ON projects.id = pledges.project_id
+  WHERE projects.category = 'books';"
+end	end
